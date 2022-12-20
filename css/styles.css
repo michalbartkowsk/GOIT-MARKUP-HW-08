@@ -1,0 +1,27 @@
+:root {
+  --active-color: #2196f3;
+  --logo-color-header: #000000;
+  --logo-color-footer: #ffffff;
+  --links-color-header: #757575;
+  --links-color-footer: #ffffff99;
+  --text-color-dark: #212121;
+  --text-color-light: #757575;
+  --bg-color-white: #ffffff;
+  --bg-color-lightgrey: #e5e5e5;
+  --bg-color-grey: #f5f4fa;
+  --bg-color-darkgrey: #2f303a;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--text-color-light);
+  background-color: var(--bg-color-lightgrey);
+}
+
+.page-header,
+.page-main {
+  background-color: var(--bg-color-white);
+}
