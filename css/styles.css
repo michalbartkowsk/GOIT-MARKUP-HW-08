@@ -21,7 +21,81 @@ body {
   background-color: var(--bg-color-lightgrey);
 }
 
+.logo {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.17;
+  color: var(--logo-color-header);
+}
+
+.logo-color {
+  color: var(--active-color);
+}
+
 .page-header,
 .page-main {
   background-color: var(--bg-color-white);
+}
+
+.menu {
+  list-style: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.menu-item {
+  text-decoration: none;
+  list-style: none;
+  color: var(--text-color-dark);
+}
+
+.menu-item-active {
+  color: var(--active-color);
+}
+
+.menu-contact {
+  text-decoration: none;
+  list-style: none;
+  color: var(--links-color-header);
+}
+
+.menu-item:hover,
+.menu-item:focus,
+.menu-contact:hover,
+.menu-contact:focus {
+  color: var(--active-color);
+}
+
+.background {
+  background-color: var(--bg-color-darkgrey);
+  text-align: center;
+}
+
+.background-heading {
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  color: var(--bg-color-white);
+  text-align: center;
+}
+.button-item {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  color: var(--bg-color-white);
+  background-color: var(--active-color);
+}
+
+.button-item:hover,
+.button-item:focus {
+  background: var(--bg-color-grey);
+  color: var(--active-color);
 }
