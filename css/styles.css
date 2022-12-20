@@ -99,3 +99,69 @@ body {
   background: var(--bg-color-grey);
   color: var(--active-color);
 }
+
+.offer {
+  background-color: var(--bg-color-white);
+}
+
+.offer-heading {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--text-color-dark);
+}
+
+.offer-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--text-color-light);
+}
+
+.activity {
+  background-color: var(--bg-color-white);
+}
+
+.activity-heading {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: var(--text-color-dark);
+}
+
+.team {
+  background-color: var(--bg-color-grey);
+}
+
+.team-heading {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: var(--text-color-dark);
+}
+
+.team-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: var(--text-color-dark);
+}
+
+.team-specialization {
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: var(--text-color-light);
+}
+
+.footer {
+  background-color: var(--bg-color-darkgrey);
+}
+
+.logo-color-footer {
+  color: var(--logo-color-footer);
+}
