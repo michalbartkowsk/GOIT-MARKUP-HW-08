@@ -180,3 +180,10 @@ body {
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
 }
+
+.address-item:hover,
+.address-item:focus,
+.address-item-contact:hover,
+.address-item-contact:focus {
+  color: var(--bg-color-white);
+}
