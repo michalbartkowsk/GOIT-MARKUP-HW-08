@@ -55,6 +55,7 @@ body {
 
 .menu-item-active {
   color: var(--active-color);
+  text-decoration: none;
 }
 
 .menu-contact {
@@ -186,4 +187,25 @@ body {
 .address-item-contact:hover,
 .address-item-contact:focus {
   color: var(--bg-color-white);
+}
+
+.choices {
+  background-color: var(--bg-color-white);
+}
+
+.choices-button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  color: var(--text-color-dark);
+  background-color: var(--bg-color-grey);
+}
+
+.choices-button:hover,
+.choices-button:focus {
+  color: var(--bg-color-white);
+  background-color: var(--active-color);
 }
