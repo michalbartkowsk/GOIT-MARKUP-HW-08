@@ -10,10 +10,11 @@
   --bg-color-lightgrey: #e5e5e5;
   --bg-color-grey: #f5f4fa;
   --bg-color-darkgrey: #2f303a;
+  --header-border-gray: #ececec;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.17;
   letter-spacing: 0.03em;
@@ -21,12 +22,28 @@ body {
   background-color: var(--bg-color-lightgrey);
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  list-style: none;
+}
+
 .logo {
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
   font-size: 26px;
   font-weight: 700;
-  line-height: 1.17;
   color: var(--logo-color-header);
 }
 
@@ -34,13 +51,22 @@ body {
   color: var(--active-color);
 }
 
+.page-header {
+  border-bottom: 1px solid var(--header-border-gray);
+}
+
 .page-header,
 .page-main {
   background-color: var(--bg-color-white);
 }
 
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .menu {
-  list-style: none;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
@@ -49,7 +75,6 @@ body {
 
 .menu-item {
   text-decoration: none;
-  list-style: none;
   color: var(--text-color-dark);
 }
 
@@ -60,7 +85,6 @@ body {
 
 .menu-contact {
   text-decoration: none;
-  list-style: none;
   color: var(--links-color-header);
 }
 
@@ -85,8 +109,6 @@ body {
   text-align: center;
 }
 .button-item {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
   font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.06em;
@@ -108,7 +130,6 @@ body {
 .offer-heading {
   font-weight: 700;
   font-size: 14px;
-  letter-spacing: 0.03em;
   color: var(--text-color-dark);
 }
 
@@ -116,7 +137,6 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.71;
-  letter-spacing: 0.03em;
   color: var(--text-color-light);
 }
 
@@ -128,7 +148,6 @@ body {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.16;
-  letter-spacing: 0.03em;
   color: var(--text-color-dark);
 }
 
@@ -140,22 +159,17 @@ body {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.16;
-  letter-spacing: 0.03em;
   color: var(--text-color-dark);
 }
 
 .team-name {
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.18;
-  letter-spacing: 0.03em;
   color: var(--text-color-dark);
 }
 
 .team-specialization {
-  font-size: 16px;
   line-height: 1.18;
-  letter-spacing: 0.03em;
   color: var(--text-color-light);
 }
 
@@ -171,7 +185,6 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.71;
-  letter-spacing: 0.03em;
   font-style: normal;
   color: var(--bg-color-white);
 }
@@ -194,11 +207,8 @@ body {
 }
 
 .choices-button {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
   font-weight: 500;
   line-height: 1.62;
-  letter-spacing: 0.03em;
   cursor: pointer;
   color: var(--text-color-dark);
   background-color: var(--bg-color-grey);
@@ -219,9 +229,7 @@ body {
 }
 
 .products-description {
-  font-size: 16px;
   font-weight: 400;
   line-height: 1.88;
-  letter-spacing: 0.03em;
   color: var(--text-color-light);
 }
