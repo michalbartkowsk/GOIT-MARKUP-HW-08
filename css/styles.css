@@ -41,10 +41,12 @@ p {
 }
 
 .logo {
+  font-family: "Raleway";
   text-decoration: none;
   font-size: 26px;
   font-weight: 700;
   color: var(--logo-color-header);
+  padding-right: 47px;
 }
 
 .logo-color {
@@ -64,9 +66,16 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 80px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
 }
 
 .menu {
+  display: flex;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
@@ -74,6 +83,7 @@ p {
 }
 
 .menu-item {
+  padding: 16px;
   text-decoration: none;
   color: var(--text-color-dark);
 }
