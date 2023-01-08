@@ -137,6 +137,7 @@ p {
   height: 50px;
   text-align: center;
   border-radius: 4px;
+  border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -146,14 +147,24 @@ p {
   color: var(--active-color);
 }
 
+.section-padding-top {
+  padding-top: 94px;
+}
+
 .offer {
   background-color: var(--bg-color-white);
+}
+
+.offer-flex {
+  display: flex;
+  gap: 30px;
 }
 
 .offer-heading {
   font-weight: 700;
   font-size: 14px;
   color: var(--text-color-dark);
+  margin-bottom: 10px;
 }
 
 .offer-text {
