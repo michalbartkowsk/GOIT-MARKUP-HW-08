@@ -13,30 +13,32 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="container">
-        <a href="index.html" class="logo"><span class="logo-color">Web</span>Studio</a>
-        <nav>
-          <ul class="menu">
-            <li><a href="index.html" class="menu-item">Agencja</a></li>
-            <li><a href="" class="menu-item-active">Portfolio</a></li>
-            <li><a href="index.html" class="menu-item">Kontakt</a></li>
-          </ul>
-        </nav>
+      <div class="container header-flex">
+        <div class="header-nav">
+          <a href="index.html" class="logo"><span class="logo-color">Web</span>Studio</a>
+          <nav class="header-nav">
+            <ul class="menu">
+              <li><a href="index.html" class="menu-item">Agencja</a></li>
+              <li><a href="" class="menu-item menu-item-active">Portfolio</a></li>
+              <li><a href="index.html" class="menu-item">Kontakt</a></li>
+            </ul>
+          </nav>
+        </div>
         <ul class="menu">
           <li>
             <a href="mailto:info@devstudio.com" class="menu-contact">info@devstudio.com</a>
           </li>
           <li>
-            <a href="tel:+48111111111" class="menu-contact">+48 111 111 111</a>
+            <a href="tel:+48111111111" class="menu-contact menu-contact-space">+48 111 111 111</a>
           </li>
         </ul>
       </div>
     </header>
 
     <main class="page-main">
-      <section class="choices">
+      <section class="choices section-padding-top">
         <div class="container">
-          <ul class>
+          <ul class="choices-options">
             <li>
               <button type="button" class="choices-button">Wszystkie</button>
             </li>
@@ -54,7 +56,7 @@
             </li>
           </ul>
           <ul class="products">
-            <li>
+            <li class="products-box">
               <figure>
                 <img src="images/portfolio-img-1.jpg" alt="Strona internetowa z trzeba kandydatami" width="370" height="294" />
                 <figcaption>
@@ -142,7 +144,9 @@
 
     <footer class="footer">
       <div class="container">
-        <a href="index.html" class="logo"><span class="logo-color">Web</span><span class="logo-color-footer">Studio</span></a>
+        <div class="address-padding">
+          <a href="index.html" class="logo"><span class="logo-color">Web</span><span class="logo-color-footer">Studio</span></a>
+        </div>
         <address>
           <ul class="address">
             <li class="address-item">m. Warszawa, Aleje Jerozolimskie 21</li>

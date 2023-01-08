@@ -281,12 +281,22 @@ p {
   background-color: var(--bg-color-white);
 }
 
+.choices-options {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
 .choices-button {
   font-weight: 500;
   line-height: 1.62;
   cursor: pointer;
   color: var(--text-color-dark);
   background-color: var(--bg-color-grey);
+  border-radius: 4px;
+  border-style: none;
+  padding: 6px 22px;
+  text-align: center;
 }
 
 .choices-button:hover,
@@ -295,16 +305,32 @@ p {
   background-color: var(--active-color);
 }
 
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+  margin-bottom: 94px;
+}
+
+.products-box {
+  background: var(--bg-color-white);
+  border: 1px solid #eeeeee;
+}
+
 .products-heading {
   font-size: 18px;
   font-weight: 700;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--text-color-dark);
+  margin: 20px 24px 4px;
 }
 
 .products-description {
   font-weight: 400;
   line-height: 1.88;
   color: var(--text-color-light);
+  margin-left: 24px;
+  margin-bottom: 20px;
 }
