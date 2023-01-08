@@ -200,30 +200,59 @@ p {
   background-color: var(--bg-color-grey);
 }
 
+.team-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+}
+
 .team-heading {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.16;
   color: var(--text-color-dark);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.team-border {
+  background-color: var(--bg-color-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  text-align: center;
 }
 
 .team-name {
   font-weight: 500;
   line-height: 1.18;
   color: var(--text-color-dark);
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .team-specialization {
   line-height: 1.18;
   color: var(--text-color-light);
+  margin-bottom: 30px;
 }
 
 .footer {
   background-color: var(--bg-color-darkgrey);
+  height: 252px;
 }
 
 .logo-color-footer {
   color: var(--logo-color-footer);
+}
+
+.address-padding {
+  padding-top: 60px;
+}
+
+.address {
+  margin-top: 20px;
 }
 
 .address-item {
@@ -232,6 +261,7 @@ p {
   line-height: 1.71;
   font-style: normal;
   color: var(--bg-color-white);
+  padding-top: 9px;
 }
 
 .address-item-contact {
