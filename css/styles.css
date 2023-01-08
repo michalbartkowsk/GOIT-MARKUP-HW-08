@@ -151,6 +151,10 @@ p {
   padding-top: 94px;
 }
 
+.section-padding-bottom {
+  padding-bottom: 94px;
+}
+
 .offer {
   background-color: var(--bg-color-white);
 }
@@ -183,6 +187,13 @@ p {
   font-weight: 700;
   line-height: 1.16;
   color: var(--text-color-dark);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.activity-flex {
+  display: flex;
+  justify-content: space-between;
 }
 
 .team {
