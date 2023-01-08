@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -46,7 +46,7 @@ p {
   font-size: 26px;
   font-weight: 700;
   color: var(--logo-color-header);
-  padding-right: 47px;
+  padding-right: 93px;
 }
 
 .logo-color {
@@ -83,9 +83,9 @@ p {
 }
 
 .menu-item {
-  padding: 16px;
   text-decoration: none;
   color: var(--text-color-dark);
+  padding: 23px;
 }
 
 .menu-item-active {
@@ -98,6 +98,10 @@ p {
   color: var(--links-color-header);
 }
 
+.menu-contact-space {
+  margin-left: 50px;
+}
+
 .menu-item:hover,
 .menu-item:focus,
 .menu-contact:hover,
@@ -108,6 +112,8 @@ p {
 .background {
   background-color: var(--bg-color-darkgrey);
   text-align: center;
+  display: flex;
+  height: 600px;
 }
 
 .background-heading {
@@ -117,6 +123,8 @@ p {
   letter-spacing: 0.06em;
   color: var(--bg-color-white);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 30px;
 }
 .button-item {
   font-weight: 700;
@@ -125,6 +133,11 @@ p {
   cursor: pointer;
   color: var(--bg-color-white);
   background-color: var(--active-color);
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .button-item:hover,
