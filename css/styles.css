@@ -115,6 +115,20 @@ p {
   height: 600px;
 }
 
+.background-image {
+  background-image: linear-gradient(
+      0deg,
+      rgba(47, 48, 58, 0.4) 0%,
+      rgb(47 48 58 / 15%) 100%
+    ),
+    url(../images/background-image.jpg);
+  width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .background-heading {
   font-size: 44px;
   font-weight: 900;
