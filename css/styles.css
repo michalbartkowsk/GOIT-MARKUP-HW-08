@@ -19,7 +19,6 @@ body {
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--text-color-light);
-  background-color: var(--bg-color-lightgrey);
 }
 
 .container {
