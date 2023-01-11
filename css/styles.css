@@ -81,6 +81,16 @@ p {
   letter-spacing: 0.02em;
 }
 
+/* .menu-contacts {
+  display: flex;
+  align-items: center;
+} */
+
+.menu-icon {
+  fill: var(--links-color-header);
+  margin-right: 10px;
+}
+
 .menu-item {
   text-decoration: none;
   color: var(--text-color-dark);
@@ -95,11 +105,22 @@ p {
 .menu-contact {
   text-decoration: none;
   color: var(--links-color-header);
+  display: flex;
+  align-items: center;
+}
+
+.menu-contact:hover svg,
+.menu-contact:focus svg {
+  fill: var(--active-color);
 }
 
 .menu-contact-space {
-  margin-left: 50px;
+  margin-left: 30px;
 }
+
+/* .menu-contacts-space {
+  margin-left: 30px;
+} */
 
 .menu-item:hover,
 .menu-item:focus,
