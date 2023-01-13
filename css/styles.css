@@ -11,6 +11,7 @@
   --bg-color-grey: #f5f4fa;
   --bg-color-darkgrey: #2f303a;
   --header-border-gray: #ececec;
+  --logo-color-gray: #afb1b8;
 }
 
 body {
@@ -223,7 +224,8 @@ p {
   color: var(--text-color-light);
 }
 
-.activity {
+.activity,
+.clients {
   background-color: var(--bg-color-white);
 }
 
@@ -252,7 +254,8 @@ p {
   align-items: center;
 }
 
-.team-heading {
+.team-heading,
+.clients-heading {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.16;
@@ -271,6 +274,7 @@ p {
 
 .team-name {
   font-weight: 500;
+  font-size: 16px;
   line-height: 1.18;
   color: var(--text-color-dark);
   margin-top: 30px;
@@ -278,9 +282,50 @@ p {
 }
 
 .team-specialization {
+  font-weight: 400;
   line-height: 1.18;
   color: var(--text-color-light);
   margin-bottom: 30px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.social-icon {
+  background-color: var(--bg-color-white);
+  fill: var(--logo-color-gray);
+  border-radius: 50%;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  background-color: var(--active-color);
+  fill: var(--bg-color-white);
+  cursor: pointer;
+}
+
+.clients-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clients-logo {
+  border: 1px solid var(--logo-color-gray);
+  border-radius: 4px;
+  fill: var(--logo-color-gray);
+}
+
+.clients-logo:hover,
+.clients-logo:focus {
+  border: 1px solid var(--active-color);
+  fill: var(--active-color);
+  cursor: pointer;
 }
 
 .footer {
