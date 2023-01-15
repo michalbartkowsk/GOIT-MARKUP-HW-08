@@ -82,11 +82,6 @@ p {
   letter-spacing: 0.02em;
 }
 
-/* .menu-contacts {
-  display: flex;
-  align-items: center;
-} */
-
 .menu-icon {
   fill: var(--links-color-header);
   margin-right: 10px;
@@ -119,10 +114,6 @@ p {
   margin-left: 30px;
 }
 
-/* .menu-contacts-space {
-  margin-left: 30px;
-} */
-
 .menu-item:hover,
 .menu-item:focus,
 .menu-contact:hover,
@@ -135,6 +126,8 @@ p {
   text-align: center;
   display: flex;
   height: 600px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .background-image {
@@ -441,6 +434,8 @@ p {
 .choices-button:focus {
   color: var(--bg-color-white);
   background-color: var(--active-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .products {
