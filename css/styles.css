@@ -285,7 +285,7 @@ p {
   font-weight: 400;
   line-height: 1.18;
   color: var(--text-color-light);
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .social {
@@ -297,9 +297,19 @@ p {
 }
 
 .social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--bg-color-white);
   fill: var(--logo-color-gray);
   border-radius: 50%;
+  width: 44px;
+  height: 44px;
+}
+
+.social-icon-size {
+  width: 20px;
+  height: 20px;
 }
 
 .social-icon:hover,
@@ -337,8 +347,10 @@ p {
   color: var(--logo-color-footer);
 }
 
-.address-padding {
+.footer-flex {
+  display: flex;
   padding-top: 60px;
+  gap: 70px;
 }
 
 .address {
