@@ -98,6 +98,25 @@ p {
   text-decoration: none;
 }
 
+.menu-item-tab {
+  color: var(--active-color);
+  position: relative;
+}
+
+.menu-item-tab::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 53px;
+  height: 4px;
+  border-radius: 2px;
+  cursor: unset;
+  pointer-events: none;
+  background-color: var(--active-color);
+  top: 68px;
+  left: 22px;
+}
+
 .menu-contact {
   text-decoration: none;
   color: var(--links-color-header);
