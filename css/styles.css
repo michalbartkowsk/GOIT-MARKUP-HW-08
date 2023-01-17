@@ -98,16 +98,31 @@ p {
   text-decoration: none;
 }
 
-.menu-item-tab {
+.present-tab,
+.present-tab-portfolio {
   color: var(--active-color);
   position: relative;
 }
 
-.menu-item-tab::after {
+.present-tab::after {
   position: absolute;
   display: block;
   content: "";
   width: 53px;
+  height: 4px;
+  border-radius: 2px;
+  cursor: unset;
+  pointer-events: none;
+  background-color: var(--active-color);
+  top: 68px;
+  left: 22px;
+}
+
+.present-tab-portfolio::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 58px;
   height: 4px;
   border-radius: 2px;
   cursor: unset;
