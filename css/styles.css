@@ -10,6 +10,7 @@
   --bg-color-lightgrey: #e5e5e5;
   --bg-color-grey: #f5f4fa;
   --bg-color-darkgrey: #2f303a;
+  --bg-color-backdrop: rgba(000, 000, 000, 0.2);
   --header-border-gray: #ececec;
   --logo-color-gray: #afb1b8;
 }
@@ -142,6 +143,7 @@ p {
 .menu-contact:hover svg,
 .menu-contact:focus svg {
   fill: var(--active-color);
+  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-contact-space {
@@ -153,6 +155,7 @@ p {
 .menu-contact:hover,
 .menu-contact:focus {
   color: var(--active-color);
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .background {
@@ -207,6 +210,7 @@ p {
 .button-item:focus {
   background: var(--bg-color-grey);
   color: var(--active-color);
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-padding-top {
@@ -363,6 +367,7 @@ p {
   background-color: var(--active-color);
   fill: var(--bg-color-white);
   cursor: pointer;
+  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list {
@@ -382,6 +387,8 @@ p {
   border: 1px solid var(--active-color);
   fill: var(--active-color);
   cursor: pointer;
+  transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer {
@@ -423,6 +430,7 @@ p {
 .address-item-contact:hover,
 .address-item-contact:focus {
   color: var(--bg-color-white);
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-us {
@@ -460,6 +468,7 @@ p {
   color: var(--bg-color-white);
   background-color: var(--active-color);
   cursor: pointer;
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .choices {
   background-color: var(--bg-color-white);
@@ -508,7 +517,6 @@ p {
 .products-card:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .products-container {
@@ -551,4 +559,45 @@ p {
   color: var(--text-color-light);
   margin-left: 24px;
   margin-bottom: 20px;
+}
+
+/* okno modalne */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color-backdrop);
+  transition: all 0.25s ease-in;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 250ms ease-in;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  min-height: 581px;
+  background-color: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
