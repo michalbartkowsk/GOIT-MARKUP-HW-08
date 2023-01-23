@@ -596,7 +596,7 @@ p {
   transform: translate(-50%, -50%);
 }
 
-.close-button {
+.modal-button {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -606,6 +606,55 @@ p {
   border-radius: 50%;
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-x-icon {
+  width: 17px;
+  height: 17px;
+  fill: var(--logo-color-header);
+}
+
+.modal-button:hover .modal-x-icon,
+.modal-button:focus .modal-x-icon {
+  opacity: 0.5;
+  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-header {
+  font-size: 20px;
+  text-align: center;
+  color: var(--text-color-dark);
+  margin: 40px 0 12px;
+}
+
+.modal-form,
+.modal-form-label {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: auto;
+  width: 448px;
+}
+
+.modal-form {
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-form-label:hover .modal-form-icon,
+.modal-form-label:focus-within .modal-form-icon {
+  fill: var(--active-color);
+  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  fill: var(--text-color-dark);
+  top: 50%;
+  left: 10px;
+  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* End of modal window */

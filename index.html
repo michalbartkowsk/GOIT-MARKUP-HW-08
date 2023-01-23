@@ -361,7 +361,26 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="close-button" data-modal-close>x</button>
+        <button type="button" class="modal-button" data-modal-close>
+          <svg class="modal-x-icon">
+            <use href="./images/icons.svg#icon-x-vector" width="17" height="17" y="2"></use>
+          </svg>
+        </button>
+        <h4 class="modal-header">Zostaw swoje dane w formularzu poniżej</h4>
+        <form class="modal-form">
+          <label class="modal-form-label"
+            >Imię
+            <input class="modal-form-input" type="text" name="name" />
+            <svg class="modal-form-icon">
+              <use href="./images/icons.svg#icon-person-black-18dp"></use>
+            </svg>
+          </label>
+          <label class="modal-form-label"></label>
+          <label class="modal-form-label"></label>
+          <label class="modal-form-label"></label>
+          <label class="modal-form-label"></label>
+          <button class="modal-form-button"></button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
