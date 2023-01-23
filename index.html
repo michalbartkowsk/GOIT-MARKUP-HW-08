@@ -372,14 +372,35 @@
             >Imię
             <input class="modal-form-input" type="text" name="name" />
             <svg class="modal-form-icon">
-              <use href="./images/icons.svg#icon-person-black-18dp"></use>
+              <use href="./images/icons.svg#icon-person-black-18dp" width="20" height="20"></use>
             </svg>
           </label>
-          <label class="modal-form-label"></label>
-          <label class="modal-form-label"></label>
-          <label class="modal-form-label"></label>
-          <label class="modal-form-label"></label>
-          <button class="modal-form-button"></button>
+          <label class="modal-form-label"
+            >Telefon
+            <input class="modal-form-input" type="text" name="phone" />
+            <svg class="modal-form-icon">
+              <use href="./images/icons.svg#icon-phone-black-18dp" width="20" height="20"></use>
+            </svg>
+          </label>
+          <label class="modal-form-label"
+            >Email
+            <input class="modal-form-input" type="text" name="email" />
+            <svg class="modal-form-icon">
+              <use href="./images/icons.svg#icon-email-black-18dp" width="20" height="20"></use>
+            </svg>
+          </label>
+          <label class="modal-form-label"
+            >Komentarz
+            <textarea class="modal-form-input modal-form-comment" name="comment" placeholder="Wprowadź tekst"></textarea>
+          </label>
+          <label class="modal-form-label modal-form-checkbox">
+            <input class="modal-form-check" type="checkbox" />
+            <svg class="modal-form-check-icon">
+              <use href="./images/icons.svg#icon-check"></use>
+            </svg>
+            <span>Oświadczam iż akceptuję <a href="index.html">Regulamin</a> i <a href="index.html">Politykę Prywatności</a>.</span>
+          </label>
+          <button class="modal-form-button" type="submit">Wyślij</button>
         </form>
       </div>
     </div>
