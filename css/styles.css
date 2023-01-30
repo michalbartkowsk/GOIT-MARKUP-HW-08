@@ -28,6 +28,8 @@ body {
 .page-header__container,
 .background__container,
 .offer__container,
+.activity__container,
+.team__container,
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -262,12 +264,12 @@ p {
   color: var(--text-color-light);
 }
 
-.activity,
-.clients {
-  background-color: var(--bg-color-white);
+.activity {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-.activity-heading {
+.activity__heading {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.16;
@@ -276,16 +278,16 @@ p {
   margin-bottom: 50px;
 }
 
-.activity-flex {
+.activity__flex {
   display: flex;
   justify-content: space-between;
 }
 
-.activity-flex li {
+.activity__flex li {
   position: relative;
 }
 
-.activity-type {
+.activity__type {
   position: absolute;
   background-color: rgba(47, 48, 58, 0.8);
   color: var(--bg-color-white);
@@ -302,16 +304,18 @@ p {
 
 .team {
   background-color: var(--bg-color-grey);
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-.team-flex {
+.team__flex {
   display: flex;
   justify-content: space-between;
   gap: 30px;
   align-items: center;
 }
 
-.team-heading,
+.team__heading,
 .clients-heading {
   font-size: 36px;
   font-weight: 700;
@@ -321,7 +325,7 @@ p {
   margin-bottom: 50px;
 }
 
-.team-border {
+.team__border {
   background-color: var(--bg-color-white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -329,7 +333,7 @@ p {
   text-align: center;
 }
 
-.team-name {
+.team__name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -338,7 +342,7 @@ p {
   margin-bottom: 10px;
 }
 
-.team-specialization {
+.team__specialization {
   font-weight: 400;
   line-height: 1.18;
   color: var(--text-color-light);
@@ -353,7 +357,7 @@ p {
   margin-bottom: 30px;
 }
 
-.social-icon {
+.social__icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -364,13 +368,16 @@ p {
   height: 44px;
 }
 
-.social-icon-size {
+.social__icon--size,
+.footer-social__icon--size {
   width: 20px;
   height: 20px;
 }
 
-.social-icon:hover,
-.social-icon:focus {
+.social__icon:hover,
+.social__icon:focus,
+.footer-social__icon:hover,
+.footer-social__icon:focus {
   background-color: var(--active-color);
   fill: var(--bg-color-white);
   cursor: pointer;
@@ -462,7 +469,7 @@ p {
   margin-top: 20px;
 }
 
-.footer-social-icon {
+.footer-social__icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -473,13 +480,6 @@ p {
   height: 44px;
 }
 
-.footer-social-icon:hover,
-.footer-social-icon:focus {
-  color: var(--bg-color-white);
-  background-color: var(--active-color);
-  cursor: pointer;
-  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
 .choices {
   background-color: var(--bg-color-white);
 }
