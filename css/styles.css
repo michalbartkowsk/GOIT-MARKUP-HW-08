@@ -216,8 +216,8 @@ p {
 .background__button:focus,
 .newsletter__button:hover,
 .newsletter__button:focus,
-.modal-form-button:hover,
-.modal-form-button:focus {
+.modal-form__button:hover,
+.modal-form__button:focus {
   background: var(--bg-color-white);
   color: var(--logo-color-header);
   transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -704,6 +704,10 @@ p {
 }
 
 .modal-form__checkbox {
+  /* include modal-form-label */
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0.01em;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -724,14 +728,14 @@ p {
   transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-check:checked + .modal-form-check-icon {
+.modal-form__check:checked + .modal-form__check--icon {
   display: block;
   background-color: var(--active-color);
   fill: var(--bg-color-white);
   border-radius: 2px;
 }
 
-.modal-form-check {
+.modal-form__check {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -742,17 +746,17 @@ p {
   cursor: pointer;
 }
 
-.modal-form-check-icon {
+.modal-form__check--icon {
   display: none;
   width: 16px;
   height: 15px;
 }
 
-.modal-form-check:checked {
+.modal-form__check:checked {
   display: none;
 }
 
-.modal-form-button {
+.modal-form__button {
   font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.06em;
