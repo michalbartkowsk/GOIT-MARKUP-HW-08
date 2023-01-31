@@ -39,3 +39,44 @@
         }
     }
 }
+
+.join-us {
+    margin-top: 12px;
+    
+    &__list {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    &__social {
+        @include flex(center);
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        background: getColor("footer-social");
+        fill: getColor("white");
+
+        &:hover,
+        &:focus {
+            @include transition(fill);
+            cursor: pointer;
+            background-color: getColor("blue");
+            fill: getColor("white");
+        }
+
+        &--size {
+            @extend .social__icon--size;
+        }
+    }
+
+    &__heading {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: getColor("gray-footer");
+    }
+}
