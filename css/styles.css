@@ -25,14 +25,6 @@ body {
   background-color: var(--bg-color-white);
 }
 
-.page-header__container,
-.background__container,
-.offer__container,
-.activity__container,
-.team__container,
-.clients__container,
-.footer__container,
-.choices__container,
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -127,7 +119,6 @@ p {
 }
 
 .nav__item--portfolio::after {
-  /* include nav__item--active */
   position: absolute;
   display: block;
   content: "";

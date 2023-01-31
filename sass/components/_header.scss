@@ -1,0 +1,93 @@
+.page-header {
+    border-bottom: 1px solid getColor("header-border");
+
+&__flex {
+    @include flex(space-between);
+    height: 80px;
+}
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+
+&__list {
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+&__item {
+    text-decoration: none;
+    padding: 23px;
+    color: getColor("black-second");
+
+    &:hover,
+    &:focus {
+        color: getColor("blue");
+        @include transition(color);
+    }
+
+    &--active {
+        text-decoration: none;
+        position: relative;
+        color: getColor("blue");
+
+        &::after {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 53px;
+            height: 4px;
+            border-radius: 2px;
+            cursor: unset;
+            pointer-events: none;
+            top: 68px;
+            left: 22px; 
+            background-color: getColor("blue");
+        }
+    }
+
+    &--portfolio {
+        @extend .nav__item--active;
+
+        &::after {
+            width: 58px;
+        }
+    }
+}
+}
+
+.menu {
+    @extend .nav__list;
+
+    &__icon {
+        margin-right: 10px;
+        fill: getColor("gray");
+    }
+
+    &__contact {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: getColor("gray");
+
+        &:hover svg,
+        &:focus svg {
+            fill: getColor("blue");
+            @include transition(fill);
+        }
+
+        &:hover,
+        &:focus {
+            color: getColor("blue");
+            @include transition(color); 
+        }
+
+        &--space {
+            margin-left: 30px; 
+        }
+    }
+}

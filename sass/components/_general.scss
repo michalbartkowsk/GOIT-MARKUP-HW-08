@@ -1,0 +1,40 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: getColor("gray");
+    background-color: getColor("white");
+  }
+  
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1,
+  h2,
+  h3,
+  ul,
+  p {
+    list-style: none;
+  }
+
+.button-theme {
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  border-style: none;
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  color: getColor("blue");
+  background-color: getColor("white");
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
