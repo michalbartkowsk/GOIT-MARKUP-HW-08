@@ -80,3 +80,59 @@
         color: getColor("gray-footer");
     }
 }
+
+.newsletter {
+    @extend .join-us;
+
+    &__heading {
+        @extend .join-us__heading;
+    }
+
+    &__form {
+        display: flex;
+
+        input[type="email"] {
+            @include border(getColor("footer-newsletter"));
+            padding: 15px 157px 15px 16px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+            background-color: transparent;
+            border-radius: 4px;
+            margin-top: 20px;
+            outline: none;
+            color: getColor("white");
+        }
+    }
+
+    &__button {
+        @extend .button-theme;
+        @include flex(center);
+        margin-top: 20px;
+        margin-left: 12px;
+
+        &:hover,
+        &:focus {
+            background: getColor("white");
+            color: getColor("black");
+            @include transition(color);
+        }
+
+        &:hover .newsletter__icon,
+        &:focus .newsletter__icon {
+            fill: getColor("blue");
+            @include transition(fill);
+        }
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        margin-left: 24px;
+        fill: getColor("white");
+
+        &:hover,
+        &:focus {
+            fill: getColor("blue");
+            @include transition(fill);
+        }
+    }
+}
