@@ -1,0 +1,71 @@
+.team {
+    @extend .activity;
+    background-color: getColor("gray-second");
+
+    &__flex {
+       @include flex(space-between);
+       gap: 30px;
+    }
+
+    &__heading {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.16;
+        text-align: center;
+        margin-bottom: 50px;
+        color: getColor("black-second");
+    }
+
+    &__border {
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+        text-align: center;
+        background-color: getColor("white");
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.18;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        color: getColor("black-second");
+    }
+
+    &__specialization {
+        font-weight: 400;
+        line-height: 1.18;
+        margin-bottom: 16px; 
+        color: getColor("gray");
+    }
+}
+
+.social {
+    @include flex(center);
+    gap: 10px;
+    margin-bottom: 30px;
+
+    &__icon {
+        @include flex(center);
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        background-color: getColor("white");
+        fill: getColor("logo");
+
+        &--size {
+            width: 20px;
+            height: 20px;
+        }
+
+        &:hover,
+        &:focus {
+            @include transition(fill);
+            cursor: pointer;
+            background-color: getColor("blue");
+            fill: getColor("white");
+        }
+    }
+
+}

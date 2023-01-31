@@ -1,0 +1,26 @@
+.clients {
+    @extend .activity;
+
+    &__heading {
+        @extend .team__heading;
+    }
+
+    &__list {
+        @include flex(space-between);
+    }
+
+    &__logo {
+        @include border(getColor("logo"));
+        border-radius: 4px;
+        fill: getColor("logo");
+
+        &:hover,
+        &:focus {
+            @include border(getColor("blue"));
+            fill: getColor("blue");
+            cursor: pointer;
+            @include transition(border);
+            @include transition(fill);
+        }
+    }
+}

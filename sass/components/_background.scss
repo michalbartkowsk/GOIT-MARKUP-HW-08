@@ -1,0 +1,45 @@
+.background {
+    text-align: center;
+    display: flex;
+    height: 600px;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: getColor("darkgray");
+
+    &__image {
+        background-image: linear-gradient(
+        0deg,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgb(47 48 58 / 15%) 100%
+        ),
+        url(../images/background-image.jpg);
+        width: 1600px;
+        height: 600px;
+        margin: 0 auto;
+        background-position: center;
+        background-repeat: no-repeat; 
+    }
+
+    &__heading {
+        font-size: 44px;
+        font-weight: 900;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        text-align: center;
+        padding-top: 200px;
+        padding-bottom: 30px;
+        color: getColor("white");
+    }
+
+    &__button {
+        @extend .button-theme;
+        text-align: center;
+
+        &:hover,
+        &:focus {
+            background: getColor("white");
+            color: getColor("black");
+            @include transition(color);
+        }
+    }
+  }

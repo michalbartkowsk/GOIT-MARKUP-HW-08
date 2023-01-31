@@ -1,0 +1,41 @@
+.footer {
+    height: 252px;
+    background-color: getColor("darkgray");
+
+    &__flex {
+        display: flex;
+        padding-top: 60px;
+        gap: 70px;
+    }
+}
+
+.address {
+    margin-top: 20px;
+
+    &__item {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.71;
+        font-style: normal;
+        padding-top: 9px;
+        color: getColor("white");
+
+        &--contact {
+            text-decoration: none;
+            font-style: normal;
+            color: getColor("footer-address");
+            
+            &:hover,
+            &:focus {
+                color: getColor("white");
+                @include transition(color);
+            }
+        }
+
+        &:hover,
+        &:focus {
+            color: getColor("white");
+            @include transition(color); 
+        }
+    }
+}
