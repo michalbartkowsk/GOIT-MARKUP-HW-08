@@ -1,0 +1,189 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    min-height: 581px;
+    transform: translate(-50%, -50%); 
+    background-color: getColor("white");
+
+    &__button {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: getColor("white");
+        
+        &:hover .modal__icon,
+        &:focus .modal__icon {
+            opacity: 0.5;
+            @include transition(opacity);   
+        }
+    }
+
+    &__icon {
+        width: 17px;
+        height: 17px;
+        fill: getColor("black");  
+    }
+
+    &__header {
+        font-size: 20px;
+        text-align: center;
+        margin: 40px 0 12px;
+        color: getColor("black-second");
+    }
+}
+
+.modal-form {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+    width: 448px;
+
+    &__label {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin: auto;
+        width: 448px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0.01em;
+        
+        &:hover .modal-form__icon,
+        &:focus .modal-form__icon {
+            fill: getColor("blue");
+            @include transition(fill);
+        }
+    }
+
+    &__input {
+        height: 40px;
+        margin-top: 4px;
+        padding-left: 40px;
+        border-radius: 4px;
+        outline: none;
+        @include border(getColor("modal-input"));
+
+        &:hover,
+        &:focus {
+            @include border(getColor("blue"));
+            @include transition(border);
+        }
+    }
+
+    &__comment {
+        height: 120px;
+        padding: 12px 16px;
+        resize: none;
+        margin-top: 4px;
+        border-radius: 4px;
+        outline: none;
+        @include border(getColor("modal-input"));
+
+        &::placeholder {
+            color: getColor("placeholder");
+        }
+
+        &:hover,
+        &:focus {
+            @include border(getColor("blue"));
+            @include transition(border);
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: 50%;
+        left: 10px;
+        fill: getColor("black-second");
+        @include transition(fill);
+    }
+
+    &__checkbox {
+        @include flex(center);
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0.01em;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        gap: 7px;
+        font-size: 14px;
+
+        a {
+            color: getColor("blue");
+
+            &:hover,
+            &:focus {
+                opacity: 0.5;
+                @include transition(opacity);
+            }
+        }
+    }
+
+    &__check {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        width: 16px;
+        height: 15px;
+        border-radius: 2px;
+        cursor: pointer;
+        @include border(getColor("gray"));
+
+        &:checked + .modal-form__check--icon {
+            display: block;
+            border-radius: 2px;
+            background-color: getColor("blue");
+            fill: getColor("white");
+        }
+
+        &:checked {
+            display: none;
+        }
+
+        &--icon {
+            display: none;
+            width: 16px;
+            height: 15px;
+        }
+    }
+
+    &__button {
+        @extend .button-theme;
+
+        &:hover,
+        &:focus {
+            background: getColor("white");
+            color: getColor("black");
+            @include transition(color);
+        }
+    }
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: getColor("bg-backdrop");
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  }
+  
+  .is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }

@@ -1,0 +1,93 @@
+.choices {
+    @extend .offer;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    
+    &__button {
+        font-weight: 500;
+        line-height: 1.62;
+        cursor: pointer;
+        border-radius: 4px;
+        border-style: none;
+        padding: 6px 22px;
+        text-align: center;
+        color: getColor("black-second");
+        background-color: getColor("gray-second");
+
+        &:hover,
+        &:focus {
+            color: getColor("white");
+            background-color: getColor("blue");
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+            transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+
+        }
+    }
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 94px;
+
+    &__card {
+        @include border(getColor("white-footer"));
+
+        &:hover,
+        &:focus {
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+            transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+        }
+
+        &:hover .products__overlay {
+            transform: translateY(0);
+        }
+    }
+
+    &__box {
+        position: relative;
+        overflow: hidden; 
+    }
+
+    &__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.55;
+        padding: 49px 45px 49px 24px;
+        transform: translateY(100%);
+        transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        background-color: getColor("blue");
+        color: getColor("white");
+    }
+
+    &__heading {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 2;
+        letter-spacing: 0.06em;
+        margin: 20px 24px 4px;
+        color: getColor("black-second");
+    }
+
+    &__description {
+        font-weight: 400;
+        line-height: 1.88;
+        margin-left: 24px;
+        margin-bottom: 20px;
+        color: getColor("gray");
+      }
+    
+}
