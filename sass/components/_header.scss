@@ -1,67 +1,105 @@
 .page-header {
     border-bottom: 1px solid getColor("header-border");
 
-&__flex {
-    @include flex(space-between);
-    height: 80px;
-}
+    &__container {
+        min-width: $screenMinWidth;
+        max-width: $screenDesktop;
+        margin: 0 auto;
+        padding: 16px 15px;
+        @include flex(space-between);
+
+        @media screen and (min-width: $screenTablet) {
+            padding: 26px 15px;
+        }
+
+        @media screen and (min-width: $screenDesktop) {
+            padding: 25px 0;
+        }
+    }
+
+    &__button {
+        min-height: 40px;
+        min-width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+    
+
+        &:hover svg,
+        &:focus svg {
+            fill: getColor("blue");
+            @include transition(fill);
+        }
+    }
+
 }
 
 .nav {
     display: flex;
     align-items: center;
 
-&__list {
-    display: flex;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-}
-
-&__item {
-    text-decoration: none;
-    padding: 23px;
-    color: getColor("black-second");
-
-    &:hover,
-    &:focus {
-        color: getColor("blue");
-        @include transition(color);
+    &__list {
+        display: none;
+        
     }
 
-    &--active {
-        text-decoration: none;
-        position: relative;
-        color: getColor("blue");
+//     &__list {
+//         display: flex;
+//         font-size: 14px;
+//         font-weight: 500;
+//         line-height: 1.14;
+//         letter-spacing: 0.02em;
+// }
 
-        &::after {
-            position: absolute;
-            display: block;
-            content: "";
-            width: 53px;
-            height: 4px;
-            border-radius: 2px;
-            cursor: unset;
-            pointer-events: none;
-            top: 68px;
-            left: 22px; 
-            background-color: getColor("blue");
+    &__item {
+        text-decoration: none;
+        padding: 23px;
+        color: getColor("black-second");
+
+            &:hover,
+            &:focus {
+                color: getColor("blue");
+                @include transition(color);
+    }
+
+        &--active {
+            text-decoration: none;
+            position: relative;
+            color: getColor("blue");
+
+            &::after {
+                position: absolute;
+                display: block;
+                content: "";
+                width: 53px;
+                height: 4px;
+                border-radius: 2px;
+                cursor: unset;
+                pointer-events: none;
+                top: 68px;
+                left: 22px; 
+                background-color: getColor("blue");
         }
     }
 
-    &--portfolio {
-        @extend .nav__item--active;
+        &--portfolio {
+            @extend .nav__item--active;
 
-        &::after {
-            width: 58px;
+            &::after {
+                width: 58px;
         }
     }
 }
 }
 
 .menu {
-    @extend .nav__list;
+    display: none;
 
     &__icon {
         margin-right: 10px;
@@ -91,3 +129,132 @@
         }
     }
 }
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+    background-color: getColor("white");
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(100%);
+    @include transition(transform);
+
+    &__icon {
+        @include flex(center);
+        min-height: 40px;
+        min-width: 40px;
+        top: 16px;
+        right: 16px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        color: getColor("dark");
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        outline: none;
+
+        &:hover svg,
+        &:focus svg {
+            fill: getColor("blue");
+            @include transition(fill);
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        letter-spacing: 0.02em;
+        font-weight: 500;
+        gap: 32px;
+    }
+    
+    &__link {
+        font-size: 40px;
+        color: getColor("black-second");
+        @include transition(color);
+
+        &--active {
+            color: getColor("blue")
+        }
+
+        &:hover,
+        &:focus {
+        color: getColor("blue");
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    &__contacts {
+        display: flex;
+        letter-spacing: 0.02em;
+        font-weight: 500;
+        flex-direction: column;
+        gap: 32px;
+
+        &:hover,
+        &:focus {
+            color: getColor("blue");
+        }
+    }
+
+    &__contact {
+        font-size: 24px;
+        color: getColor("gray");
+        @include transition(color);
+
+        &:hover,
+        &:focus {
+            color: getColor("blue");
+        }
+    }
+
+    &__socials {
+        display: flex;
+        letter-spacing: 0.02em;
+        font-weight: 500;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    &__social-item {
+        padding-right: 10px;
+
+        &:not(:last-of-type) {
+          border-right: 1px solid rgba(33, 33, 33, 0.2);
+        }
+    }
+
+    &__social-link {
+        font-size: 18px;
+        line-height: 1.22;
+        color: getColor("blue");
+        @include transition(color);
+      
+      }
+    }
+
+.mobile-menu.is-open {
+    transform: translateX(0);
+}
+
+@media screen and (min-width: $screenTablet) {
+    .mobile-menu__icon {
+        display: none;
+    }
+}
+
+
+
+

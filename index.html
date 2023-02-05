@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
-    <!-- <link href="./css/styles.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css" integrity="sha512-Y0MM+V6ymRKN2zStTqzQ227DWhhp4Mzdo6gnlRnuaNCbc+YN/ZH0sBCLTM4M0oSy9c9VKiCvd4Jk44aCLrNS5Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" />
@@ -14,37 +13,40 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="container">
-        <div class="page-header__flex">
-          <div class="nav">
-            <a href="index.html" class="logo"><span class="logo--color">Web</span>Studio</a>
-            <nav>
-              <ul class="nav__list">
-                <li><a href="" class="nav__item nav__item--active">Agencja</a></li>
-                <li><a href="portfolio.html" class="nav__item">Portfolio</a></li>
-                <li><a href="" class="nav__item">Kontakt</a></li>
-              </ul>
-            </nav>
-          </div>
-          <ul class="menu">
-            <li>
-              <a href="mailto:info@devstudio.com" class="menu__contact">
-                <svg class="menu__icon" width="16" height="12">
-                  <use href="./images/icons.svg#envelope"></use>
-                </svg>
-                info@devstudio.com
-              </a>
-            </li>
-            <li>
-              <a href="tel:+48111111111" class="menu__contact menu__contact--space">
-                <svg class="menu__icon" width="10" height="16">
-                  <use href="./images/icons.svg#smartphone"></use>
-                </svg>
-                +48 111 111 111
-              </a>
-            </li>
-          </ul>
+      <div class="page-header__container">
+        <div class="nav">
+          <a href="index.html" class="logo"><span class="logo--color">Web</span>Studio</a>
+          <nav>
+            <ul class="nav__list">
+              <li><a href="" class="nav__item nav__item--active">Agencja</a></li>
+              <li><a href="portfolio.html" class="nav__item">Portfolio</a></li>
+              <li><a href="" class="nav__item">Kontakt</a></li>
+            </ul>
+          </nav>
         </div>
+        <ul class="menu">
+          <li>
+            <a href="mailto:info@devstudio.com" class="menu__contact">
+              <svg class="menu__icon" width="16" height="12">
+                <use href="./images/icons.svg#envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li>
+            <a href="tel:+48111111111" class="menu__contact menu__contact--space">
+              <svg class="menu__icon" width="10" height="16">
+                <use href="./images/icons.svg#smartphone"></use>
+              </svg>
+              +48 111 111 111
+            </a>
+          </li>
+        </ul>
+        <button class="page-header__button js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -122,15 +124,15 @@
           <h2 class="activity__heading">Czym się zajmujemy</h2>
           <ul class="activity__flex">
             <li>
-              <img src="./images/image-1.jpg" alt="Creating code" width="370" height="294" />
+              <img src="./images/image-1.jpg" srcset="./images/image-1@2x.jpg 2x" alt="Creating code" width="370" height="294" />
               <figcaption class="activity__type">aplikacje komputerowe</figcaption>
             </li>
             <li>
-              <img src="./images/image-2.jpg" alt="Creating mobile app" width="370" height="294" />
+              <img src="./images/image-2.jpg" srcset="./images/image-2@2x.jpg 2x" alt="Creating mobile app" width="370" height="294" />
               <figcaption class="activity__type">aplikacje mobilne</figcaption>
             </li>
             <li>
-              <img src="./images/image-3.jpg" alt="Creating styles" width="370" height="294" />
+              <img src="./images/image-3.jpg" srcset="./images/image-3@2x.jpg 2x" alt="Creating styles" width="370" height="294" />
               <figcaption class="activity__type">rozwiązania graficzne</figcaption>
             </li>
           </ul>
@@ -142,7 +144,7 @@
           <ul class="team__flex">
             <li class="team__border">
               <figure>
-                <img src="./images/johndoe-1.jpg" alt="John Doe" width="270" height="260" />
+                <img src="./images/johndoe-1.jpg" srcset="./images/johndoe-1@2x.jpg 2x" alt="John Doe" width="270" height="260" />
                 <figcaption>
                   <h3 class="team__name">John Doe</h3>
                   <p class="team__specialization">Product Designer</p>
@@ -173,7 +175,7 @@
             </li>
             <li class="team__border">
               <figure>
-                <img src="./images/johndoe-2.jpg" alt="Jane Doe" width="270" height="260" />
+                <img src="./images/johndoe-2.jpg" srcset="./images/johndoe-2@2x.jpg 2x" alt="Jane Doe" width="270" height="260" />
                 <figcaption>
                   <h3 class="team__name">John Doe</h3>
                   <p class="team__specialization">Frontend Developer</p>
@@ -204,7 +206,7 @@
             </li>
             <li class="team__border">
               <figure>
-                <img src="./images/johndoe-3.jpg" alt="John Doe" width="270" height="260" />
+                <img src="./images/johndoe-3.jpg" srcset="./images/johndoe-3@2x.jpg 2x" alt="John Doe" width="270" height="260" />
                 <figcaption>
                   <h3 class="team__name">John Doe</h3>
                   <p class="team__specialization">Marketing</p>
@@ -235,7 +237,7 @@
             </li>
             <li class="team__border">
               <figure>
-                <img src="./images/johndoe-4.jpg" alt="John Doe" width="270" height="260" />
+                <img src="./images/johndoe-4.jpg" srcset="./images/johndoe-4@2x.jpg 2x" alt="John Doe" width="270" height="260" />
                 <figcaption>
                   <h3 class="team__name">John Doe</h3>
                   <p class="team__specialization">UI Designer</p>
@@ -409,6 +411,32 @@
         </form>
       </div>
     </div>
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+      <button class="mobile-menu__icon js-close-menu">
+        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      <ul class="mobile-menu__list">
+        <li><a href="./index.html" class="mobile-menu__link mobile-menu__link--active">Agencja</a></li>
+        <li><a href="./portfolio.html" class="mobile-menu__link">Portfolio</a></li>
+        <li><a href="./index.html" class="mobile-menu__link">Kontakt</a></li>
+      </ul>
+      <div class="mobile-menu__container">
+        <ul class="mobile-menu__contacts">
+          <li><a href="tel:+48111111111" class="mobile-menu__contact">+48 111 111 111</a></li>
+          <li><a href="mailto:info@devstudio.com" class="mobile-menu__contact">info@devstudio.com</a></li>
+        </ul>
+        <ul class="mobile-menu__socials">
+          <li class="mobile-menu__social-item"><a class="mobile-menu__social-link" href="./index.html">Instagram</a></li>
+          <li class="mobile-menu__social-item"><a class="mobile-menu__social-link" href="./index.html">Twitter</a></li>
+          <li class="mobile-menu__social-item"><a class="mobile-menu__social-link" href="./index.html">Facebook</a></li>
+          <li class="mobile-menu__social-item"><a class="mobile-menu__social-link" href="./index.html">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js" integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA==" crossorigin="anonymous"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
