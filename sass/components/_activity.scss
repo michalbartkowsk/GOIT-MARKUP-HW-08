@@ -1,19 +1,36 @@
 .activity {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    min-width: $screenMinWidth;
+    padding: 60px 15px;
+    margin: 0 auto;
+    display: none;
+
+    @media screen and (min-width: $screenDesktop) {
+        padding: 94px 0;
+        display: block;
+    }
+
+    &__container {
+        max-width: $screenDesktop;
+        margin: 0 auto;
+    }
 
     &__heading {
-        font-size: 36px;
+        font-size: 28px;
         font-weight: 700;
-        line-height: 1.16;
+        line-height: 1.14;
         text-align: center;
         margin-bottom: 50px;
         color: getColor("black-second");
+
+        @media screen and (min-width: $screenDesktop) {
+            font-size: 36px;
+            line-height: 1.17;
+          }
     }
 
     &__flex {
-        display: flex;
-        justify-content: space-between;
+        @include flex(space-between);
+        gap: 30px;
 
         li {
             position: relative;

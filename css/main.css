@@ -17,6 +17,12 @@ body {
   padding: 0;
 }
 
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 h1,
 h2,
 h3,
@@ -489,17 +495,35 @@ p {
   }
 }
 
-.activity, .clients, .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+.activity, .clients {
+  min-width: 320px;
+  padding: 60px 15px;
+  margin: 0 auto;
+  display: none;
 }
-.activity__heading {
-  font-size: 36px;
+@media screen and (min-width: 1200px) {
+  .activity, .clients {
+    padding: 94px 0;
+    display: block;
+  }
+}
+.activity__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.activity__heading, .team__heading, .clients__heading {
+  font-size: 28px;
   font-weight: 700;
-  line-height: 1.16;
+  line-height: 1.14;
   text-align: center;
   margin-bottom: 50px;
   color: #212121;
+}
+@media screen and (min-width: 1200px) {
+  .activity__heading, .team__heading, .clients__heading {
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 .activity__flex {
   display: -webkit-box;
@@ -508,6 +532,10 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
 }
 .activity__flex li {
   position: relative;
@@ -528,34 +556,53 @@ p {
 }
 
 .team {
+  min-width: 320px;
+  padding: 60px 15px;
+  margin: 0 auto;
   background-color: #f5f4fa;
 }
+@media screen and (min-width: 1200px) {
+  .team {
+    padding: 94px 0;
+  }
+}
+.team__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .team__flex {
+  gap: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-.team__heading, .clients__heading {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.16;
-  text-align: center;
-  margin-bottom: 50px;
-  color: #212121;
+.team__flex > li {
+  width: calc(100% - 30px);
+  max-width: 450px;
 }
-.team__border {
+@media screen and (min-width: 1200px) {
+  .team__heading, .clients__heading {
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
+.team__info {
+  margin: auto 0;
+  padding: 0 0 24px 0;
+  background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   text-align: center;
-  background-color: #ffffff;
 }
 .team__name {
   font-weight: 500;
@@ -571,8 +618,40 @@ p {
   margin-bottom: 16px;
   color: #757575;
 }
-
-.social {
+@media screen and (min-width: 768px) {
+  .team .team__flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 15px;
+  }
+  .team .team__flex > li {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team .team__flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .team .team__info {
+    max-width: 270px;
+    padding: 0 0 30px 0;
+  }
+}
+.team .social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -583,9 +662,9 @@ p {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  margin-bottom: 30px;
+  margin-top: 20px;
 }
-.social__icon {
+.team .social__icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -601,11 +680,11 @@ p {
   background-color: #ffffff;
   fill: #afb1b8;
 }
-.social__icon--size, .join-us__social--size {
+.team .social__icon--size, .team .join-us__social--size {
   width: 20px;
   height: 20px;
 }
-.social__icon:hover, .social__icon:focus {
+.team .social__icon:hover, .team .social__icon:focus {
   -webkit-transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
