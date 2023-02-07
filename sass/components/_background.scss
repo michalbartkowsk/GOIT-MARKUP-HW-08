@@ -1,10 +1,18 @@
 .background {
-    text-align: center;
-    display: flex;
-    height: 600px;
-    max-width: 1600px;
-    margin: 0 auto;
     background-color: getColor("darkgray");
+
+    &__container {
+        &__container {
+            min-width: $screenMinWidth;
+            max-width: 1600px;
+            // margin: 0 auto;
+        
+        @media screen and (min-width: $screenDesktop) {
+            margin: 0 auto;
+        }
+        }
+    }
+
 
     &__image {
         background-image: linear-gradient(
@@ -13,27 +21,43 @@
         rgb(47 48 58 / 15%) 100%
         ),
         url(../images/background-image.jpg);
-        width: 1600px;
-        height: 600px;
+        max-width: 1600px;
+        min-width: $screenMinWidth;
         margin: 0 auto;
-        background-position: center;
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__flex {
+        flex-direction: column;
+        gap: 30px;
+        @include flex(center);
+        margin: 0 auto;
+        height: 400px;
+
+        @media screen and (min-width: $screenDesktop) {
+        height: 600px;
+      }
     }
 
     &__heading {
-        font-size: 44px;
         font-weight: 900;
-        line-height: 1.36;
+        font-size: 26px;
+        line-height: 1.6;
         letter-spacing: 0.06em;
-        text-align: center;
-        padding-top: 200px;
-        padding-bottom: 30px;
         color: getColor("white");
+        text-align: center;
+        margin: 0;
+    
+      @media screen and (min-width: $screenDesktop) {
+        font-size: 44px;
+        line-height: 1.36;
+      }
     }
 
     &__button {
         @extend .button-theme;
-        text-align: center;
+        
 
         &:hover,
         &:focus {
@@ -42,4 +66,17 @@
             @include transition(color);
         }
     }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .background__image {
+        background-image: linear-gradient(
+            0deg,
+            rgba(47, 48, 58, 0.4) 0%,
+            rgb(47 48 58 / 15%) 100%
+            ),
+            url(../images/background-image@2x.jpg);
+    }
+  }
   }

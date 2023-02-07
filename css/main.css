@@ -17,12 +17,6 @@ body {
   padding: 0;
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 h1,
 h2,
 h3,
@@ -64,16 +58,6 @@ p {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (min-width: 768px) {
-  .page-header__container {
-    padding: 26px 15px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .page-header__container {
-    padding: 25px 0;
-  }
-}
 .page-header__button {
   min-height: 40px;
   min-width: 40px;
@@ -106,14 +90,19 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 93px;
 }
 .nav__list {
   display: none;
 }
 .nav__item {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
   text-decoration: none;
-  padding: 23px;
   color: #212121;
+  -webkit-transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav__item:hover, .nav__item:focus {
   color: #2196f3;
@@ -321,10 +310,15 @@ p {
 .logo {
   font-family: "Raleway";
   text-decoration: none;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
-  padding-right: 93px;
+  line-height: 1.17;
   color: #000000;
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+  }
 }
 .logo--color {
   color: #2196f3;
@@ -334,54 +328,32 @@ p {
 }
 
 .background {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 600px;
-  max-width: 1600px;
-  margin: 0 auto;
   background-color: #2f303a;
+}
+.background__container__container {
+  min-width: 320px;
+  max-width: 1600px;
+}
+@media screen and (min-width: 1200px) {
+  .background__container__container {
+    margin: 0 auto;
+  }
 }
 .background__image {
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.15))), url(../images/background-image.jpg);
   background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.15) 100%), url(../images/background-image.jpg);
-  width: 1600px;
-  height: 600px;
+  max-width: 1600px;
+  min-width: 320px;
   margin: 0 auto;
-  background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
-.background__heading {
-  font-size: 44px;
-  font-weight: 900;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-align: center;
-  padding-top: 200px;
-  padding-bottom: 30px;
-  color: #ffffff;
-}
-.background__button {
-  text-align: center;
-}
-.background__button:hover, .background__button:focus {
-  background: #ffffff;
-  color: #000000;
-  -webkit-transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.offer, .choices {
-  padding-top: 94px;
-}
-.offer__flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.background__flex {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 30px;
-}
-.offer__box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,17 +363,97 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 270px;
-  height: 120px;
+  margin: 0 auto;
+  height: 400px;
+}
+@media screen and (min-width: 1200px) {
+  .background__flex {
+    height: 600px;
+  }
+}
+.background__heading {
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+}
+@media screen and (min-width: 1200px) {
+  .background__heading {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+.background__button:hover, .background__button:focus {
+  background: #ffffff;
+  color: #000000;
+  -webkit-transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .background .background__image {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.15))), url(../images/background-image@2x.jpg);
+    background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.15) 100%), url(../images/background-image@2x.jpg);
+  }
+}
+
+.offer, .choices {
+  min-width: 320px;
+  padding: 60px 15px 0;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1200px) {
+  .offer, .choices {
+    padding: 94px 0 0;
+  }
+}
+.offer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.offer__flex {
+  margin-bottom: 60px;
+  gap: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.offer__flex > li {
+  max-width: 450px;
+}
+.offer__box {
+  padding: 25px 0;
   border-radius: 4px;
   margin-bottom: 30px;
   background-color: #f5f4fa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .offer__heading {
   font-weight: 700;
   font-size: 14px;
   margin-bottom: 10px;
   color: #212121;
+  text-align: center;
 }
 .offer__text {
   font-size: 14px;
@@ -410,8 +462,31 @@ p {
   color: #757575;
 }
 .offer__icon {
-  margin-right: 10px;
   fill: #757575;
+}
+@media screen and (min-width: 768px) {
+  .offer .offer__flex, .choices .offer__flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .offer .offer__flex > li, .choices .offer__flex > li {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+  .offer .offer__heading, .choices .offer__heading {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .offer .offer__flex, .choices .offer__flex {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin: 0;
+  }
 }
 
 .activity, .clients, .team {

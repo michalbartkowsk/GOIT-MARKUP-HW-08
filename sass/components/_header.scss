@@ -7,14 +7,6 @@
         margin: 0 auto;
         padding: 16px 15px;
         @include flex(space-between);
-
-        @media screen and (min-width: $screenTablet) {
-            padding: 26px 15px;
-        }
-
-        @media screen and (min-width: $screenDesktop) {
-            padding: 25px 0;
-        }
     }
 
     &__button {
@@ -43,10 +35,10 @@
 .nav {
     display: flex;
     align-items: center;
+    gap: 93px;
 
     &__list {
-        display: none;
-        
+        display: none;      
     }
 
 //     &__list {
@@ -58,9 +50,12 @@
 // }
 
     &__item {
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.02em;
         text-decoration: none;
-        padding: 23px;
         color: getColor("black-second");
+        @include transition(color);
 
             &:hover,
             &:focus {

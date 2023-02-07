@@ -1,18 +1,35 @@
 .offer {
-    padding-top: 94px;
+    min-width: $screenMinWidth;
+    padding: 60px 15px 0;
+    margin: 0 auto;
+
+    @media screen and (min-width: $screenDesktop) {
+        padding: 94px 0 0;
+    }
+
+    &__container {
+        max-width: $screenDesktop;
+        margin: 0 auto;
+    }
+
 
     &__flex {
-        display: flex;
-        gap: 30px; 
+        margin-bottom: 60px;
+        gap: 30px;
+        @include flex(center);
+        flex-direction: column;
+
+        > li {
+            max-width: 450px;
+        }
     }
 
     &__box {
-        @include flex(center);
-        width: 270px;
-        height: 120px;
+        padding: 25px 0;
         border-radius: 4px;
         margin-bottom: 30px;
         background-color: getColor("gray-second");
+        @include flex(center);
     }
 
     &__heading {
@@ -20,6 +37,7 @@
         font-size: 14px;
         margin-bottom: 10px; 
         color: getColor("black-second");
+        text-align: center;
     }
 
     &__text {
@@ -30,7 +48,28 @@
     }
 
     &__icon {
-        margin-right: 10px;
         fill: getColor("gray");
     }
+
+    @media screen and (min-width: $screenTablet) {
+        .offer__flex {
+            flex-direction: row;
+            flex-wrap: wrap;
+    
+        > li {
+            flex-basis: calc((100% - 30px) / 2);
+        }
+        }
+    
+        .offer__heading {
+            text-align: left;
+        }
+    }
+    
+    @media screen and (min-width: $screenDesktop) {
+        .offer__flex {
+            flex-wrap: nowrap;
+            margin: 0;
+        }
+}
 }
