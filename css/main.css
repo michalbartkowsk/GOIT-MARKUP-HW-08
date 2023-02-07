@@ -495,14 +495,14 @@ p {
   }
 }
 
-.activity, .clients {
+.activity {
   min-width: 320px;
   padding: 60px 15px;
   margin: 0 auto;
   display: none;
 }
 @media screen and (min-width: 1200px) {
-  .activity, .clients {
+  .activity {
     padding: 94px 0;
     display: block;
   }
@@ -511,7 +511,7 @@ p {
   max-width: 1200px;
   margin: 0 auto;
 }
-.activity__heading, .team__heading, .clients__heading {
+.activity__heading, .team__heading {
   font-size: 28px;
   font-weight: 700;
   line-height: 1.14;
@@ -520,7 +520,7 @@ p {
   color: #212121;
 }
 @media screen and (min-width: 1200px) {
-  .activity__heading, .team__heading, .clients__heading {
+  .activity__heading, .team__heading {
     font-size: 36px;
     line-height: 1.17;
   }
@@ -590,7 +590,7 @@ p {
   max-width: 450px;
 }
 @media screen and (min-width: 1200px) {
-  .team__heading, .clients__heading {
+  .team__heading {
     font-size: 36px;
     line-height: 1.17;
   }
@@ -692,21 +692,49 @@ p {
   fill: #ffffff;
 }
 
+.clients {
+  min-width: 320px;
+  padding: 60px 15px;
+  margin: 0 auto;
+}
+.clients__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.clients__heading {
+  font-weight: 700;
+  font-size: 28px;
+  color: #212121;
+  text-align: center;
+  margin-bottom: 50px;
+  line-height: 1.14;
+}
+@media screen and (min-width: 1200px) {
+  .clients__heading {
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
 .clients__list {
+  gap: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .clients__logo {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
+  width: 210px;
+  height: 92px;
 }
 .clients__logo:hover, .clients__logo:focus {
   border: 1px solid #2196f3;
@@ -718,6 +746,22 @@ p {
   transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 768px) {
+  .clients__logo {
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .customers__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .customers__logo {
+    width: 170px;
+    height: 92px;
+  }
+}
 .footer {
   height: 252px;
   background-color: #2f303a;

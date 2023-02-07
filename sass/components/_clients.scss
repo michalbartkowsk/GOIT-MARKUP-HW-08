@@ -1,18 +1,39 @@
 .clients {
-    @extend .activity;
+    min-width: $screenMinWidth;
+    padding: 60px 15px;
+    margin: 0 auto;
 
-    &__heading {
-        @extend .team__heading;
+    &__container {
+        max-width: $screenDesktop;
+        margin: 0 auto;
     }
 
+    &__heading {
+        font-weight: 700;
+        font-size: 28px;
+        color: getColor("black-second");
+        text-align: center;
+        margin-bottom: 50px;
+        line-height: 1.14;
+
+        @media screen and (min-width: $screenDesktop) {
+            font-size: 36px;
+            line-height: 1.17;
+    }
+}
+
     &__list {
-        @include flex(space-between);
+        gap: 30px;
+        @include flex(center);
+        flex-wrap: wrap;
     }
 
     &__logo {
         @include border(getColor("logo"));
         border-radius: 4px;
         fill: getColor("logo");
+        width: 210px;
+        height: 92px;
 
         &:hover,
         &:focus {
@@ -22,5 +43,20 @@
             @include transition(border);
             @include transition(fill);
         }
+    }
+}
+@media screen and (min-width: $screenTablet) {
+    .clients__logo {
+        flex-basis: calc((100% - 2 * 30px) / 3);
+    }
+}
+
+@media screen and (min-width: $screenDesktop) {
+    .customers__list {
+    flex-wrap: nowrap;
+}
+    .customers__logo {
+        width: 170px;
+        height: 92px;
     }
 }
