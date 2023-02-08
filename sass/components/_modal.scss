@@ -1,11 +1,26 @@
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 528px;
-    min-height: 581px;
-    transform: translate(-50%, -50%); 
-    background-color: getColor("white");
+
+    &__container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        min-height: 581px;
+        background-color: getColor("white");
+        transform: translate(-50%, -50%);
+        font-size: 12px;
+        border-radius: 4px;
+        padding-bottom: 40px;
+
+        @media screen and (min-width: $screenMobile) {
+            max-width: 450px;
+        }
+
+        @media screen and (min-width: $screenDesktop) {
+            max-width: 528px;
+        }
+
+    }
 
     &__button {
         position: absolute;
@@ -26,8 +41,6 @@
     }
 
     &__icon {
-        width: 17px;
-        height: 17px;
         fill: getColor("black");  
     }
 
@@ -40,24 +53,17 @@
 }
 
 .modal-form {
-    display: flex;
     position: relative;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
     margin: auto;
-    width: 448px;
+    width: 93%;
+    gap: 10px;
+    @include flex(center);
 
     &__label {
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        margin: auto;
-        width: 448px;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 19px;
-        letter-spacing: 0.01em;
+        @extend .modal-form;
+        gap: 0;
+        align-items: stretch;
         
         &:hover .modal-form__icon,
         &:focus .modal-form__icon {
@@ -82,13 +88,10 @@
     }
 
     &__comment {
+        @extend .modal-form__input;
         height: 120px;
         padding: 12px 16px;
         resize: none;
-        margin-top: 4px;
-        border-radius: 4px;
-        outline: none;
-        @include border(getColor("modal-input"));
 
         &::placeholder {
             color: getColor("placeholder");
@@ -112,41 +115,44 @@
     }
 
     &__checkbox {
-        @include flex(center);
-        font-weight: 400;
-        line-height: 19px;
-        letter-spacing: 0.01em;
         margin-top: 10px;
         margin-bottom: 20px;
         gap: 7px;
-        font-size: 14px;
+        font-size: 12px;
+        flex-direction: row; 
+        @include flex(center);
 
-        a {
-            color: getColor("blue");
-
-            &:hover,
-            &:focus {
-                opacity: 0.5;
-                @include transition(opacity);
-            }
+        @media screen and (min-width: $screenDesktop) {
+            font-size: 14px;
         }
     }
 
     &__check {
-        -moz-appearance: none;
-        -webkit-appearance: none;
         appearance: none;
-        width: 16px;
-        height: 15px;
+        width: 13px;
+        height: 12px;
         border-radius: 2px;
-        cursor: pointer;
+        cursor: pointer; 
         @include border(getColor("gray"));
+
+        @media screen and (min-width: $screenDesktop) {
+            width: 16px;
+            height: 15px;
+        }
 
         &:checked + .modal-form__check--icon {
             display: block;
             border-radius: 2px;
             background-color: getColor("blue");
             fill: getColor("white");
+            border-radius: 2px;
+            width: 13px;
+            height: 12px; 
+                
+            @media screen and (min-width: $screenDesktop) {
+                width: 16px;
+                height: 15px;
+            }
         }
 
         &:checked {
@@ -155,8 +161,17 @@
 
         &--icon {
             display: none;
-            width: 16px;
-            height: 15px;
+        }
+    }
+
+    &__link {
+        color: getColor("blue");
+        text-decoration: underline;
+
+        &:hover,
+        &:focus {
+            opacity: 0.5;
+            @include transition(opacity);
         }
     }
 
