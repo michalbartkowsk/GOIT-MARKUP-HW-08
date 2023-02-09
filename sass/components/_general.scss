@@ -5,6 +5,7 @@ body {
     letter-spacing: 0.03em;
     color: getColor("gray");
     background-color: getColor("white");
+    overflow-x:hidden;
   }
   
   .container {
